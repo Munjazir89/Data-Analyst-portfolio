@@ -1,0 +1,765 @@
+/* =========================================================
+   ========== GLOBAL STYLES & VARIABLES ==========
+========================================================= */
+:root {
+  --primary: #0077b6;
+  --accent: #00b4d8;
+  --bg-light: #121212;
+  --bg-dark: #121212;
+  --text-light: #ddd;
+  --text-dark: #ddd;
+}
+
+.hidden {
+  display: none;
+}
+
+[data-theme="light"] {
+  --bg-light: #f5f6fa;
+  --text-light: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-light);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  transition: background-color 0.4s, color 0.4s;
+}
+.logo {
+  font-family: "Nosifer", sans-serif;
+  font-size: 1.5rem;
+}
+/* =========================================================
+   ========== HEADER & NAVBAR ==========
+========================================================= */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #0077b6;
+  z-index: 1000;
+}
+
+.navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: 1s ease;
+}
+
+.nav-links a:hover {
+  color: #0077b6;
+}
+
+/* =========================================================
+   ========== GENERAL SECTIONS ==========
+========================================================= */
+.section {
+  padding: 80px 10%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.6s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   ========== BUTTONS ==========
+========================================================= */
+/* From Uiverse.io by Madflows */
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    #0077b6 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+/* =========================================================
+   ========== INTRO / HERO ==========
+========================================================= */
+.intro {
+  color: #f5f6fa;
+}
+
+.intro img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid #0077b6;
+  box-shadow: 3px 3px 5px #0077b6, -3px -3px 5px #0077b6;
+}
+
+/* ===== HERO SECTION WITH VIDEO BACKGROUND ===== */
+#home {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero-content p {
+  font-family: "Nosifer", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+em {
+  color: #005f8a;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+}
+#hero::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.hero-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+/* =========================================================
+   ========== SKILLS ==========
+========================================================= */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background: #0077b6;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.skill-card img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.skill-card p {
+  color: #fff;
+  text-align: center;
+}
+
+/* =========================================================
+   ========== PROJECTS ==========
+========================================================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* =========================================================
+   ========== ABOUT ==========
+========================================================= */
+.about {
+  text-align: left;
+}
+.resume a {
+  position: relative;
+  text-decoration: none;
+  background: #005f8a;
+  padding: 15px 10px;
+  border-radius: 10px;
+  color: #f9f9f9;
+  top: 20px;
+}
+.resume a:hover {
+  background: #1982b3;
+}
+/* =========================================================
+   ========== CONTACT FORM ==========
+========================================================= */
+.form-container {
+  width: 90%;
+  max-width: 700px;
+  background: linear-gradient(var(--bg-light), var(--bg-light)) padding-box,
+    linear-gradient(145deg, transparent 35%, #0077b6, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+  margin: 40px auto;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+  text-align: left;
+}
+
+.form-container .form-group input,
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--text-light);
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  resize: none;
+  height: 96px;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus,
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #0077b6;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #717171;
+  font-weight: 600;
+  width: 50%;
+  max-width: 250px;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* =========================================================
+   ========== THEME TOGGLE SWITCH ==========
+========================================================= */
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  transform: translateX(50px);
+  background-color: var(--dark);
+  box-shadow: none;
+}
+
+/* =========================================================
+   ========== LOADER ==========
+========================================================= */
+.loading-wave {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-light);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+.loading-bar {
+  width: 20px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #0077b6;
+  border-radius: 5px;
+  animation: loading-wave-animation 1s ease-in-out infinite;
+}
+
+.loading-bar:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.loading-bar:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.loading-bar:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes loading-wave-animation {
+  0% {
+    height: 10px;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 10px;
+  }
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* =========================================================
+   ========== RESPONSIVE ==========
+========================================================= */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .form-container {
+    padding: 24px 16px;
+    font-size: 13px;
+  }
+  .form-container .form-submit-btn {
+    width: 100%;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px 14px;
+    border-radius: 12px;
+  }
+  .form-container .form-group input,
+  .form-container .form-group textarea {
+    padding: 10px 12px;
+  }
+}
+/* =========================================================
+   ========== PROJECTS SECTION ==========
+========================================================= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-items: center;
+}
+
+.card {
+  background: var(--bg-light);
+  color: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card__content {
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.card__title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.card__description {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  margin: 10px 0 10px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card__button {
+  display: inline-block;
+  background: #0077b6;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.card__button:hover {
+  background: #005f8a;
+}
+
+/* ===== Responsive Layout ===== */
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card img {
+    height: 160px;
+    margin: 0;
+  }
+}
+
+.card svg {
+  width: 48px;
+  fill: #333;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--bg-light);
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__button {
+  padding: 15px;
+  border-radius: 8px;
+  background: #777;
+  border: none;
+  color: white;
+}
+
+.secondary {
+  background: transparent;
+  color: #777;
+  border: 1px solid #777;
+}
+/* ===== MODERN SOCIAL ICONS ===== */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e6f0fa;
+  color: #0077b6;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 15px rgba(0, 119, 182, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* === Smooth hover glow & bounce === */
+.social-icon:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(0, 119, 182, 0.35);
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: #fff;
+}
+
+/* === Icon color variations === */
+.linkedin:hover {
+  background: linear-gradient(135deg, #0077b5, #00a0dc);
+}
+
+.github:hover {
+  background: linear-gradient(135deg, #333, #6e5494);
+}
+
+.whatsapp:hover {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+.email:hover {
+  background: linear-gradient(135deg, #ea4335, #ff6b6b);
+}
+
+/* === Optional soft pulsing animation === */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.social-icon:hover i {
+  animation: pulse 0.8s ease-in-out;
+}
+footer {
+  height: 100px;
+  background: var(--bg-light);
+  border-top: 1px solid #0077b5;
+  text-align: center;
+  padding: 30px;
+}
+footer p a {
+  text-decoration: none;
+  color: #0077b5;
+}
+footer p a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Analyst Portfolio | Ghaniyat</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="loading-wave">
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+    </div>
+    <!-- ===== NAVIGATION ===== -->
+
+    <header>
+      <nav class="navbar">
+        <h1 class="logo"><span>Portfolio.</span></h1>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="toggle-switch theme-btn">
+          <label class="switch-label">
+            <input type="checkbox" checked class="checkbox" id="theme-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ===== HOME SECTION ===== -->
+
+    <section id="home" class="section home">
+      <video autoplay muted loop playsinline class="bg-video" id="bgVideo">
+        <source src="image/background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="intro hero-content">
+        <img src="image/profilePic.jpg" alt="" />
+        <h2>Hello, I'm <span>Ghaniyat Olumegbon Omotosho</span></h2>
+        <p>Data Analyst · UI/UX Designer · Content Creator</p>
+
+        <button class="button">
+          <a href="#projects">
+            <span class="#projects button-content">View My Work</span></a
+          >
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="section about">
+      <h2>About <em>Me</em></h2>
+      <p class="about">
+        I’m Ghaniyat Olumegbon-Omotosho
+        <em style="font-size: 1.3rem">Based in Lagos,Nigeria</em> a data entry
+        specialist turned data analyst and UI/UX designer who combines
+        analytical rigor with thoughtful design and clear storytelling. I’m
+        advancing my analytics and product skills through the ALX and 3MTT
+        fellowships, where I work on real datasets and cross-functional
+        projects. As a content creator for Google Developer Groups (GDG Ajah)
+        and a Language Reviewer at Data Scientists Network (DSN), I help make
+        technical learning accessible and inclusive. My work spans exploratory
+        data analysis, dashboarding with Power BI and Excel, and Figma-driven
+        interface design with an emphasis on accessibility and intuitive flows.
+        I enjoy turning messy data into actionable insights and crafting
+        interfaces that help people complete tasks efficiently.
+      </p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="image/python.png" alt="python" />
+          <p>Python</p>
+        </div>
+        <div class="skill-card">
+          <img src="image/sql.png" alt="sql" />
+          <p>SQL</p>
+        </div>
+        <div class="skill-card">
+          <img src="image/powerBi.png" alt="Poweer Bi" />
+          <p>Power BI</p>
+        </div>
+        <div class="skill-card">
+          <img src="image/figma.png" alt="Figma" />
+          <p>Figma</p>
+        </div>
+        <div class="skill-card">
+          <img src="image/Excel.png" alt="Excel" />
+          <p>Excel</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="section projects">
+      <h2>Latest <em>Projects</em></h2>
+      <div class="project-grid">
+        <div class="card">
+          <img
+            src="image/safety.png"
+            alt="Safety Shield App"
+            class="card__image"
+          />
+          <div class="card__content">
+            <p class="card__title">🛡️ Safety Shield App</p>
+            <p class="card__description">
+              Analyzed user data for app feature improvement using Excel and
+              Power BI. Built during the 3MTT Hackathon.
+            </p>
+            <a
+              href="https://safety-app2.vercel.app/"
+              target="_blank"
+              class="card__button"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="image/data.png"
+            alt="Data Analysis Assignments"
+            class="card__image"
+          />
+          <div class="card__content">
+            <p class="card__title">📊 Data Analysis Assignments</p>
+            <p class="card__description">
+              Explored datasets on job changes, student performance, and heart
+              attack predictions using Python, Excel, and Power BI.
+            </p>
+            <a class="card__button" title="Not Added Yet">View Details</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="image/Uiux.png"
+            alt="UI/UX Design Projects"
+            class="card__image"
+          />
+          <div class="card__content">
+            <p class="card__title">🎨 UI/UX Design Projects</p>
+            <p class="card__description">
+              Designed clean, user-friendly interfaces in Figma with a focus on
+              accessibility and intuitive navigation.
+            </p>
+            <a class="card__button" title="Not Added Yet">View Designs</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="image/project4.jpg"
+            alt="Safety Shield App"
+            class="card__image"
+          />
+          <div class="card__content">
+            <p class="card__title">📊 Market Waka Data insights</p>
+            <p class="card__description">
+              Applied data analysis and visualization to improve trade
+              efficiency, expand market access, and strengthen digital commerce
+              performance.
+            </p>
+            <a
+              href="https://docs.google.com/presentation/d/1lSdD5foiEYx_tnvFkg67GNtxfWIby9lo1nGtoNAwp8Y/edit?slide=id.g2d5c82edaac_0_2#slide=id.g2d5c82edaac_0_2"
+              target="_blank"
+              class="card__button"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="image/project5.png"
+            alt="Safety Shield App"
+            class="card__image"
+          />
+          <div class="card__content">
+            <p class="card__title">📊 Maternal Death Data insight</p>
+            <p class="card__description">
+              Analyzed maternal mortality data to uncover key trends and
+              insights for improving healthcare outcomes.
+            </p>
+            <a
+              href="https://docs.google.com/presentation/d/1UHOvs9NYIPmDpObgt9JXEzZwiSp_RPGMi-uzdGi-qHk/mobilepresent?pli=1&slide=id.g31a8c1efd8e_0_1178"
+              target="_blank"
+              class="card__button"
+              >Live Demo</a
+            >
+          </div>
+        </div>
+      </div>
+      .
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section id="resume" class="section resume">
+      <h2>Resume</h2>
+      <p>Download my resume or view it online.</p>
+      <a
+        href="image/Ghaniyat_Olumegbon_Omotosho_Resume.pdf"
+        class="btn"
+        target="_blank"
+        >Download Resume</a
+      >
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="section contact">
+      <h2>Contact <em>Me</em></h2>
+      <!-- ===== SOCIAL MEDIA ICONS ===== -->
+      <div class="social-links">
+        <a
+          href="https://linkedin.com/in/ghaniyat-olumegbon-omotosho-792850316"
+          target="_blank"
+          class="social-icon linkedin"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a
+          href="https://github.com/Munjazir89"
+          target="_blank"
+          class="social-icon github"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://wa.me/2348123567817"
+          target="_blank"
+          class="social-icon whatsapp"
+        >
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:Munjazir@gmail.com" class="social-icon email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <br />
+      <h3>Let's Connect and Make It Happen!</h3>
+      <div class="form-container">
+        <form class="form">
+          <div class="form-group">
+            <label for="email">Name:</label>
+            <input required="" name="name" name" type="text" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input required="" name="email" id="email" type="email" />
+          </div>
+          <div class="form-group">
+            <label for="textarea">How Can We Help You?</label>
+            <textarea required="" id="textarea" name="message"> </textarea>
+          </div>
+          <button class="button">
+            <span class="#projects button-content">Submit</span>
+          </button>
+        </form>
+        <p id="status"></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Ghaniyat Olumegbon-Omotosho All rights reserved.</p>
+      <p class="developer-credit">
+        Developed by
+        <a
+          href="https://kamaluddin.is-a-fullstack.dev"
+          target="_blank"
+          style="font-weight: 700"
+          >Devkhamal</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
