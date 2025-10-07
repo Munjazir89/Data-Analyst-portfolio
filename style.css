@@ -630,6 +630,7 @@ button a {
   .card img {
     height: 160px;
     margin: 0;
+    margin-top: 45px;
   }
 }
 
